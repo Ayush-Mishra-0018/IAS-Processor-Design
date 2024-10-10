@@ -1,0 +1,72 @@
+010 2
+011 7
+012 1
+013 6
+014 5
+015 19
+016 123
+017 80
+018 0
+019 2
+020 10
+021 2
+022 0
+023 10
+024 1
+025 0
+026 2
+027 0
+028 0 
+029 0 
+030 0 
+031 0
+032 0 
+200 load m(022);add m(020)
+201 stor m(202,8:19);nop
+202 load m(000);gt m(021)
+203 jump+ m(310,0:19);load m(022)
+204 add m(024);stor m(022)
+205 load m(022);lt m(023)
+206 jump+ m(315,0:19);jump m(316,0:19)
+310 load m(022);add m(020)
+311 stor m(312,8:19);nop
+312 load m(000);stor m(021)
+313 jump m(203,20:39);nop
+315 jump m(200,0:19);nop
+316 jump m(500,0:19);nop
+500 load m(025);add m(020)
+501 stor m(502,8:19);nop
+502 load m(000);lt m(026)
+503 jump+ m(510,0:19);load m(025)
+504 add m(024);stor m(025)
+505 load m(025);lt m(023)
+506 jump+ m(550,0:19);jump m(551,0:19)
+510 load m(025);add m(020)
+511 stor m(512,8:19);nop
+512 load m(000);stor m(026)
+513 jump m(503,20:39);nop
+550 jump m(500,0:19);nop
+551 jump m(600,0:19);nop
+600 load m(021);sub m(026)
+601 stor m(027);nop
+602 load m(021);add m(026)
+603 stor m(028);nop
+604 load m(027);div m(028)
+605 load MQ;stor m(029)
+606 jump m(750,0:19);nop
+750 load m(020);add m(031)
+751 stor m(752,28:39);nop
+752 load m(030);add m(000)
+753 stor m(030);load m(031)
+754 add m(024);stor m(031)
+755 jump m(800,0:19);nop
+800 load m(031);lt m(023)
+801 jump+ m(750,0:19);jump m(802,0:19)
+802 load m(030);div m(023)
+803 load MQ;stor m(032)
+804 return m(021);nop
+805 return m(026);nop
+806 return m(027);nop
+807 return m(030);nop
+808 return m(029);nop
+809 return m(032);nop
